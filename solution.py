@@ -33,7 +33,7 @@ def route_messages(messages: list[dict]) -> list[str] | str:
     q = deque(entry)
     order = []
 
-    # Kahn's Algorithm: We re buliding the execution order by running all the 
+    # Kahn's Algorithm: We are buliding the execution order by running all the 
     # outgoing dependencies of agents with zero incoming handoffs. 
     while q:
 
