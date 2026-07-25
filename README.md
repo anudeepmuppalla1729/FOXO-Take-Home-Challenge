@@ -2,10 +2,9 @@
 
 ## Problem
 
-In a multi-agent system, each message declares who an agent is handing
-off to next. Given the messages from one session, figure out the valid
-execution order of agents, or detect a deadlock — a cycle where agents
-just keep handing off to each other with no exit.
+In a multi-agent system, each agent message declares who it's handing off to next. Given a list of messages for
+one session, determine the valid execution order of agents, or detect a deadlock (a cycle where agents hand off
+to each other forever with no exit).
 
 ## Approach
 
@@ -88,4 +87,3 @@ python -m pytest tests/ -v
 - One agent with multiple outgoing handoffs, checking the `id` tie-break
 - Messages passed in out of arrival order
 - A diamond-shaped graph (one agent fans out, then it fans back in)
-- A longer 5-agent chain
